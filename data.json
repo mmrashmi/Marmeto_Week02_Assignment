@@ -1,0 +1,63 @@
+{
+    "header":{
+        "logo":"./assests/Logo.png",
+        "nav":[
+            {
+                "linkTitle":"Shop",
+                "Navlink":"#"
+            },
+            {
+                "linkTitle":"Brand",
+                "Navlink":"#"
+            },
+            {
+                "linkTitle":"Contact Us",
+                "Navlink":"#"
+            }
+        ],
+        "showsSignupButton":true
+    },
+    "sectionBlocks":[
+        {
+            "heading":"Exquisite Watches",
+            "mini-Description":"Gold Luxury, Choose Us",
+            "Description":"Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+            "Price":"$499.00 ",
+            "media":"./assests/Group 4.png"
+        },
+        {
+            "heading":"Dainty Timepieces",
+            "Description":"Explore the Ideal Timepiece for any Moment and Enhance Your style with Timeless sophistication and Impeccable Craftsmanship - timepiece",
+            "Price":"$469.00 ",
+            "media":"./assests/Group 5.png"
+        },
+        {
+            "heading":"Elegent Timepieces",
+            "Description":"Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
+            "Price":"$529.00 ",
+            "media":"./assests/Group 6.png"
+        },
+        {
+            "heading":"Refined Timepieces",
+            "Description":"Explore the Ideal Timepiece for any Moment and Enhance Your style with Timeless sophistication and Impeccable Craftsmanship - timepiece",
+            "Price":"$599.00 ",
+            "media":"./assests/Group 7.png"
+        }
+
+    ],
+    "socialIcons":[
+        {
+            "social-media":"Facebook",
+            "link":"./assests/facebook.png"
+        },
+        {
+            "social-media":"Twitter",
+            "link":"./assests/twitter.png"
+        },
+        {
+            "social-media":"Youtube",
+            "link":"./assests/Group 4.png"
+        }
+    ]
+
+}
