@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div class="main">
+  <div class="main-parent">
+<div class="main">
     <header class="navbar">
         <div class="left-nav">
          <img src="./assests/Logo.png" alt="" id="logo">
@@ -26,6 +27,8 @@
      </header>
      
   </div>
+  </div>
+  
   <div class="parent-content">
     <div class="content-div">
         <div class="left-content">
@@ -48,22 +51,18 @@
                 </div>
             </div>
         </div>
-        <div id="product-splide" class="splide">
+        <div class="right-content">
+          <div id="product-splide" class="splide">
             <div class="splide__track">
               <ul class="splide__list">
-                <!-- Dynamic content will be inserted here -->
               </ul>
             </div>
           </div>
+        </div>
     </div>
-  </div>
+  </div> 
 
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
   <script src="logic.js"></script>
 </body>
 </html>
-
-<!-- <img src="${product.media}" alt="${product.heading}">
-<h3>${product.name}</h3>
-<p>${product.price}</p>
-<p>${product.description}</p> -->

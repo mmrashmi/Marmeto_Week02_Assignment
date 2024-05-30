@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slide.classList.add('splide__slide');
         // updateProductDetails(index)
         slide.innerHTML = `
-                <div class="right-content">
+                <div class="product-content">
                     <div class="prod-img">
                         <img src="${product.media}" alt="" id="product-img">
                     </div>
@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
         splideList.appendChild(slide);
     });
-    
     let spl=new Splide('#product-splide', {
         type: 'loop',
         perPage: 1,

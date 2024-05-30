@@ -6,6 +6,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+.main-parent {
+    width: 100%;
+}
+
 :root {
     --bg-color: linear-gradient(105.54deg, #f4a764 -2.93%, #ffdec2 72.14%);
     --padding-external: 3rem;
@@ -18,12 +22,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .navbar {
-    width: 1418px;
+    max-width: 1418px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.left-nav {
+    margin-left: 16px;
 }
 
 .right-nav {
@@ -31,6 +41,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+    .right-nav {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 528px) {
+    .right-nav {
+        justify-content: flex-end;
+    }
 }
 
 .nav-list {
@@ -41,15 +64,38 @@
     font-weight: 500;
 }
 
+@media (max-width: 768px) {
+    .nav-list {
+        width: 250px;
+        margin-left: 12px;
+    }
+    .nav-list .nav-option {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 528px) {
+    .nav-list {
+        display: none;
+    }
+}
+
 .sign-up {
     border: none;
     background-color: #1C1415;
     color: #FFFFFF;
     border-radius: 50px;
-    padding: 14px 38px;
+    padding: 10px 38px;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+    .sign-up {
+        padding: 8px 24px;
+        font-size: 10px;
+    }
 }
 
 .parent-content {
@@ -64,14 +110,32 @@
     justify-content: space-between;
 }
 
+@media (max-width: 1025px) {
+    .content-div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-div .left-content {
+        width: 100% !important;
+        align-items: center;
+    }
+    .content-div .right-content {
+        width: 100%;
+    }
+}
+
 .left-content {
-    width: 613px;
+    max-width: 613px;
+    width: 47%;
     display: flex;
     flex-direction: column;
+    margin-left: 16px;
 }
 
 .right-content {
-    width: 613px;
+    max-width: 613px;
+    width: 47%;
     display: flex;
     flex-direction: column;
 }
@@ -83,10 +147,34 @@
     margin-bottom: 18px;
 }
 
+@media (max-width: 498px) {
+    .heading {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 376px) {
+    .heading {
+        font-size: 24px;
+    }
+}
+
 .mini-description {
     font-size: 32px;
     font-weight: 900;
     color: #FFFFFF;
+}
+
+@media (max-width: 498px) {
+    .mini-description {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 376px) {
+    .mini-description {
+        font-size: 18px;
+    }
 }
 
 .choose-us {
@@ -99,6 +187,13 @@
     font-weight: 600;
     line-height: 36px;
     margin-top: 42px;
+    text-align: center;
+}
+
+@media (max-width: 498px) {
+    .description {
+        font-size: 14px;
+    }
 }
 
 .price {
@@ -106,6 +201,12 @@
     font-weight: 700;
     color: #FFFFFF;
     margin: 18px 0px;
+}
+
+@media (max-width: 498px) {
+    .price {
+        font-size: 24px;
+    }
 }
 
 .social-links {
@@ -117,8 +218,14 @@
     transition: all 0.2s;
 }
 
+@media (max-width: 498px) {
+    .fb-img {
+        padding: 6px 12px;
+    }
+}
+
 .social-img {
-    padding: 6px 8px;
+    padding: 4px 6px;
 }
 
 .img-div {
@@ -147,31 +254,16 @@
     border-radius: 24px;
 }
 
-.product-img {
-    width: 100%;
-    max-width: 499px;
-}
-
-.splide_list {
-    width: 200px !important;
-}
-
 .splide__arrow {
     background-color: transparent;
     border: none;
     color: #000;
     font-size: 24px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-.splide__arrow--prev {
-    left: -30px; /* Adjust this value to position the left arrow */
-}
-
-.splide__arrow--next {
-    right: -15px; /* Adjust this value to position the right arrow */
+.splide__arrow--prev::before,
+.splide__arrow--next::before {
+    content: none;
 }
 
 .splide__arrow:hover {
@@ -179,7 +271,35 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* #product-img {} */
+
+@media (max-width: 548px) {
+    #product-img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 390px) {
+    #product-img {
+        width: 240px;
+    }
+}
+
+.product-content {
+    display: flex;
+    justify-content: center;
+}
+
+#product-splide {
+    width: 100% !important;
+}
+
 .splide {
-    width: 40%;
-    position: relative;
+    width: 100% !important;
+}
+
+@media (max-width: 496px) {
+    .splide {
+        width: 80% !important;
+    }
 }
