@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
+
 :root {
-	--bg-color: linear-gradient(105.54deg, #f4a764 -2.93%, #ffdec2 72.14%);
-	--padding-external: 3rem;
-	--product-title-color: #ffffff;
-	--dark-color: #1c1415;
+    --bg-color: linear-gradient(105.54deg, #f4a764 -2.93%, #ffdec2 72.14%);
+    --padding-external: 3rem;
+    --product-title-color: #ffffff;
+    --dark-color: #1c1415;
 }
+
 .main {
     display: flex;
     flex-direction: column;
@@ -67,6 +70,12 @@
     flex-direction: column;
 }
 
+.right-content {
+    width: 613px;
+    display: flex;
+    flex-direction: column;
+}
+
 .heading {
     font-size: 46px;
     font-weight: 900;
@@ -74,14 +83,14 @@
     margin-bottom: 18px;
 }
 
-.mini-description{
+.mini-description {
     font-size: 32px;
     font-weight: 900;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 
-.choose-us{
-    color:#1C1415;
+.choose-us {
+    color: #1C1415;
 }
 
 .description {
@@ -103,12 +112,12 @@
     display: flex;
 }
 
-.fb-img{
+.fb-img {
     padding: 8px 14px;
     transition: all 0.2s;
 }
 
-.social-img{
+.social-img {
     padding: 6px 8px;
 }
 
@@ -124,6 +133,10 @@
     cursor: pointer;
 }
 
+.img-div:hover {
+    border: 2px solid #1C1415;
+}
+
 .navigation-btn {
     padding: 12px 16px;
     background: transparent;
@@ -135,10 +148,11 @@
 }
 
 .product-img {
-    width: 499px;
+    width: 100%;
+    max-width: 499px;
 }
 
-.splide_list{
+.splide_list {
     width: 200px !important;
 }
 
@@ -147,22 +161,25 @@
     border: none;
     color: #000;
     font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.splide__arrow--prev::before,
-.splide__arrow--next::before {
-    content: none;
+.splide__arrow--prev {
+    left: -30px; /* Adjust this value to position the left arrow */
 }
 
-.splide__arrow--prev::after {
-    content: '<';
-}
-
-.splide__arrow--next::after {
-    content: '>';
+.splide__arrow--next {
+    right: -15px; /* Adjust this value to position the right arrow */
 }
 
 .splide__arrow:hover {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.splide {
+    width: 40%;
+    position: relative;
 }

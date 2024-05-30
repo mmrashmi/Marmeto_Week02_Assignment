@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 {
                     "heading": "Dainty Timepieces",
-                    "miniDescription": "Gold Luxury",
+                    "miniDescription": "Dainty Luxury",
                     "Description": "Explore the Ideal Timepiece for any Moment and Enhance Your style with Timeless sophistication and Impeccable Craftsmanship - timepiece",
                     "Price": "$469.00 ",
                     "media": "./assests/Group 5.png",
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 {
                     "heading": "Elegant Timepieces",
-                    "miniDescription": "Gold Luxury",
+                    "miniDescription": "Elegant Luxury",
                     "Description": "Discover the Perfect Watch for Every Occasion and Elevate Your Style with Timeless Elegance and Precision Craftsmanship - watch",
                     "Price": "$529.00 ",
                     "media": "./assests/Group 6.png",
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 {
                     "heading": "Refined Timepieces",
-                    "miniDescription": "Gold Luxury",
+                    "miniDescription": "Refined Luxury",
                     "Description": "Explore the Ideal Timepiece for any Moment and Enhance Your style with Timeless sophistication and Impeccable Craftsmanship - timepiece",
                     "Price": "$599.00 ",
                     "media": "./assests/Group 7.png",
@@ -75,33 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
     UpdateContent(0);
     const productList = products[0].sectionBlocks;
     const splideList = document.querySelector('.splide__list');
+    // function updateProductDetails(index){
+    //     heading.textContent=products[0].sectionBlocks[index].heading;
+    // }
+    // updateProductDetails(0);
     productList.forEach((product, index) => {
         const slide = document.createElement('li');
         slide.classList.add('splide__slide');
-
+        // updateProductDetails(index)
         slide.innerHTML = `
-        <div class="parent-content">
-            <div class="content-div">
-                <div class="left-content">
-                    <span class="heading">${product.heading}</span>
-
-                    <span class="mini-description">${product.miniDescription}
-                        <span class="choose-us">, Choose Us</span>
-                    </span>
-                    <span class="description">${product.Description}</span>
-                    <span class="price">${product.Price}</span>
-                    <div class="social-links">
-                        <div class="img-div">
-                            <img src="./assests/facebook.png" alt="" class=" fb-img">
-                        </div>
-                        <div class="img-div">
-                            <img src="./assests/twitter.png" alt="" class="social-img diff-img">
-                        </div>
-                        <div class="img-div">
-                            <img src="./assests/youtube.png" alt="" class="social-img">
-                        </div>
-                    </div>
-                </div>
                 <div class="right-content">
                     <div class="prod-img">
                         <img src="${product.media}" alt="" id="product-img">
@@ -133,6 +115,17 @@ document.addEventListener('DOMContentLoaded', function () {
     function UpdateContent (index){
         let body = document.querySelector("body");
         body.style.background =products[0].sectionBlocks[index].backgroundColor;
-    
-    }
+        const heading = document.querySelector('.heading');
+        const miniDescription = document.querySelector('.mini-description');
+        const chooseUs=document.createElement('span');
+        const description=document.querySelector('.description');
+        const price=document.querySelector('.price');
+        heading.textContent=products[0].sectionBlocks[index].heading;
+        miniDescription.innerHTML=`
+         <span class="mini-description">${products[0].sectionBlocks[index].miniDescription}</span>
+         <span class="choose-us">, Choose Us</span>
+        `;
+        description.textContent=products[0].sectionBlocks[index].Description;
+        price.textContent=products[0].sectionBlocks[index].Price;
+    }
 });
